@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Symptom Checker | Doctor AI</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>🩺 Doctor AI</h1>
+    <p>Basic Health Guidance Using AI</p>
+</header>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="symptoms.html">Check Symptoms</a>
+    <a href="chat.html">Doctor AI Chat</a>
+    <a href="tips.html">Health Tips</a>
+</nav>
+
+<section class="main">
+    <h2>Select Your Symptoms</h2>
+    <p>Please select the symptoms you are experiencing:</p>
+
+    <form id="symptomForm">
+        <label>
+    <input type="checkbox" value="sorethroat"> Sore Throat
+</label><br><br>
+
+<label>
+    <input type="checkbox" value="nausea"> Nausea
+</label><br><br>
+
+<label>
+    <input type="checkbox" value="chestpain"> Chest Pain
+</label><br><br>
+
+<label>
+    <input type="checkbox" value="fever"> Fever
+</label><br><br>
+
+ <label>
+    <input type="checkbox" value="cough"> Cough
+</label><br><br>
+
+ <label>
+     <input type="checkbox" value="headache"> Headache
+ </label><br><br>
+
+ <label>
+    <input type="checkbox" value="fatigue"> Fatigue
+</label><br><br>
+
+        <button type="button" class="button" onclick="checkSymptoms()">
+            Analyze Symptoms
+        </button>
+    </form>
+
+    
+</section>
+
+<footer>
+    <p>
+        ⚠️ This website provides only basic health guidance.
+        It does not replace professional medical consultation.
+    </p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>

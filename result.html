@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Health Risk Result | Doctor AI</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>🩺 Doctor AI</h1>
+    <p>Basic Health Guidance Using AI</p>
+</header>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="symptoms.html">Check Symptoms</a>
+    <a href="chat.html">Doctor AI Chat</a>
+    <a href="tips.html">Health Tips</a>
+</nav>
+
+<section class="main">
+    <h2>Your Health Risk Result</h2>
+
+    <div class="risk-meter">
+    <div class="risk low" id="low">Low</div>
+    <div class="risk medium" id="medium">Medium</div>
+    <div class="risk high" id="high">High</div>
+</div>
+
+<div class="advice-card" id="advice">
+    Loading result...
+</div>
+<div style="margin-top: 20px; text-align: center;">
+    <a href="chat.html" class="button">
+        Next → Doctor AI Chat
+    </a>
+</div>
+
+</section>
+
+<footer>
+    <p>
+        ⚠️ This website provides only basic health guidance.
+        It does not replace professional medical consultation.
+    </p>
+</footer>
+
+<script>
+    let risk = localStorage.getItem("healthRisk");
+    let cause = localStorage.getItem("cause");
+    let adviceText = localStorage.getItem("advice");
+
+    if (!risk) {
+        document.getElementById("advice").innerHTML =
+            "<p>No result found. Please check symptoms first.</p>";
+    } else {
+        document.getElementById(risk).classList.add("active");
+
+        document.getElementById("advice").innerHTML = `
+            <h3>${risk.toUpperCase()} Risk</h3>
+            <p><strong>Possible Cause:</strong> ${cause}</p>
+            <p><strong>What to do:</strong> ${adviceText}</p>
+            <p><strong>When to see doctor:</strong> ${
+                risk === "high" ? "Immediately" :
+                risk === "medium" ? "If symptoms persist" :
+                "Only if symptoms worsen"
+            }</p>
+        `;
+    }
+</script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Doctor AI Chat</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>🩺 Doctor AI</h1>
+    <p>Basic Health Guidance Using AI</p>
+</header>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="symptoms.html">Check Symptoms</a>
+    <a href="chat.html">Doctor AI Chat</a>
+    <a href="tips.html">Health Tips</a>
+</nav>
+
+<section class="main">
+    <h2>Doctor AI Chat 💬</h2>
+
+    <div class="chat-box" id="chatBox">
+        <div class="bot-message">
+            🤖 Hello! I am Doctor AI.  
+            Please describe your health concern.
+        </div>
+    </div>
+
+    <!-- Quick suggestions -->
+    <div class="suggestions">
+        <button onclick="quickSend('I have fever')">Fever</button>
+        <button onclick="quickSend('I have cough')">Cough</button>
+        <button onclick="quickSend('Headache')">Headache</button>
+        <button onclick="quickSend('Stomach pain')">Stomach Pain</button>
+    </div>
+
+    <!-- Input -->
+    <div class="chat-input">
+        <input type="text" id="userInput" placeholder="Type or speak your symptoms">
+        <button onclick="startVoice()">🎤</button>
+        <button onclick="sendMessage()">Send</button>
+    </div>
+    <div style="margin-top:20px;">
+    <a href="tips.html" class="button">
+        ➡️ Go to Health Tips
+    </a>
+</div>
+
+</section>
+
+
+
+<footer>
+    <p>
+        ⚠️ This chat provides only basic health guidance.
+        It does not replace professional medical consultation.
+    </p>
+</footer>
+
+<script src="chat.js"></script>
+
+</body>
+</html>
